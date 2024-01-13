@@ -9,7 +9,7 @@ COPY ./go.mod ./go.mod
 RUN go mod download
 
 COPY . .
-RUN CGO_ENABLED=0 go build -ldflags "-X github.com/willfantom/overseerr-exporter/cmd.version=${EXPORTER_VERSION}" -o overseerr-exporter .
+RUN CGO_ENABLED=0 go build -ldflags "-X github.com/perryhuynh/overseerr-exporter/cmd.version=${EXPORTER_VERSION}" -o overseerr-exporter .
 
 
 FROM alpine:3.17
